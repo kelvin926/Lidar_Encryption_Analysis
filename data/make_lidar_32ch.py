@@ -7,5 +7,5 @@ def generate_32_channel_lidar():
         z = np.random.uniform(-3, 3, 1000)
         lidar_data.extend([(x[i], y[i], z[i], channel) for i in range(1000)])
     return lidar_data
-with open('data/lidar_data_32ch.json', 'w') as f:
+with open('lidar_data_32ch.json', 'w') as f:
     json.dump(generate_32_channel_lidar(), f)
